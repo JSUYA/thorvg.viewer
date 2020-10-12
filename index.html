@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
   <style>
     .w3-color-picker-size {
       width: 20px;
@@ -112,8 +113,18 @@
         <input type="button" value="Apply" id="p-data-btn" class="w3-button thorvg-container-color w3-small w3-card w3-right w3-stretch w3-round ">
       </div>
     </div>
+    <div id="editor">
+        <p>SVG Codes</p>
+    </div>
   </div>
 </div>
 <script src="main.js"></script>
+<script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+</script>
 </body>
 </html>
