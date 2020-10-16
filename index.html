@@ -107,7 +107,16 @@
     <div id="p-editor-block" class="w3-auto w3-container w3-border w3-panel w3-card w3-white w3-round-xlarge" style="display: none; flex-grow: 1;">
       <div style="min-height: 5px;"></div>
       <div class="w3-margin">
-        <textarea autocomplete="off" id="p-data-textarea" wrap="logical" spellcheck="false" style="width: 100%; min-height: 800px; resize: vertical; font-size: 12px;"></textarea>
+ <textarea autocomplete="off" id="p-data-textarea" wrap="logical" spellcheck="false" style="width: 100%; min-height: 800px; resize: vertical; font-size: 12px;"></textarea>
+
+<script>
+        ClassicEditor
+            .create( document.querySelector( '#p-data-textarea' ) )
+            .catch( error => {
+                console.error( error );
+            } );
++</script>
+
       </div>
       <div class="w3-container w3-margin" style="display: flex;">
         <input type="button" value="Apply" id="p-data-btn" class="w3-button thorvg-container-color w3-small w3-card w3-right w3-stretch w3-round ">
@@ -122,12 +131,5 @@
   </div>
 </div>
 <script src="main.js"></script>
-<script>
-        ClassicEditor
-            .create( document.querySelector( '#editor' ) )
-            .catch( error => {
-                console.error( error );
-            } );
-</script>
 </body>
 </html>
